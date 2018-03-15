@@ -1,19 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {Dish} from '../shared';
-@Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
-})
-export class MenuComponent implements OnInit {
-dishes:Dish[]=[
+import {Dish} from '../shared/dish';//EDITED PATH
+
+const DISHES:Dish[]=[
    {
-     name:'Uthappizza',
+     name:'Harrise',
      image: '/assets/images/uthappizza.png',
      category: 'mains',
      label:'Hot',
      price:'4.99',
-     description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
+     description:'A unique combination of dagethmazz and lawas'},
   {
      name:'Zucchipakoda',
      image: '/assets/images/zucchipakoda.png',
@@ -37,8 +32,16 @@ dishes:Dish[]=[
      description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms'                        }
   ];
 
-]
-  constructor() { }
+
+@Component({
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss']
+})
+export class MenuComponent implements OnInit {
+dishes=DISHES;
+selectedDish = DISHES[1];
+constructor() { };
 
   ngOnInit() {
   }
