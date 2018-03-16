@@ -1,0 +1,9 @@
+Dish=[
+{
+"name": "Harrise",
+"image": "/assets/images/uthappizza.png",
+"category": "mains",
+"label": "Hot",
+"price": "4.99",
+"description": "A unique combination of dagethmazz and lawas"
+}

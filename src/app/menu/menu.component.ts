@@ -1,36 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {Dish} from '../shared/dish';//EDITED PATH
-
-const DISHES:Dish[]=[
-   {
-     name:'Harrise',
-     image: '/assets/images/uthappizza.png',
-     category: 'mains',
-     label:'Hot',
-     price:'4.99',
-     description:'A unique combination of dagethmazz and lawas'},
-  {
-     name:'Zucchipakoda',
-     image: '/assets/images/zucchipakoda.png',
-     category: 'appetizer',
-     label:'',
-     price:'1.99',
-     description:'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce'                        },
-  {
-     name:'Vadonut',
-     image: '/assets/images/vadonut.png',
-     category: 'appetizer',
-     label:'New',
-     price:'1.99',
-     description:'A quintessential ConFusion experience, is it a vada or is it a donut?'                        },
-  {
-     name:'ElaiCheese Cake',
-     image: '/assets/images/elaicheesecake.png',
-     category: 'dessert',
-     label:'',
-     price:'2.99',
-     description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms'                        }
-  ];
+Dish=[
+{
+"name": "Harrise",
+"image": "/assets/images/uthappizza.png",
+"category": "mains",
+"label": "Hot",
+"price": "4.99",
+"description": "A unique combination of dagethmazz and lawas"
+}
 
 
 @Component({
@@ -39,11 +17,20 @@ const DISHES:Dish[]=[
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-dishes=DISHES;
-selectedDish = DISHES[1];
+  onSelect(){
+  //work here
+  //make an http request and fetch jason data
+  //get output in tabular form);
+  /*var app=angular.module("tut",[]);
+  app.controller(myCtrl,function($scope,$http)){
+    var x=$http.get("pak.json")
+    *.then(function(response){
+    $scope.friends=response.data;*/
+  console.log("hi")}
+
 constructor() { };
 
   ngOnInit() {
   }
 
-}
+}//class colose
